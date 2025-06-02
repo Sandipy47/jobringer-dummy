@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.5;
+    background-image: linear-gradient(rgb(2, 15, 61), black);
+    color: white;
+}
+/* Welcome Bar */
+.header > h1{
+    text-align: start;
+    font-size: 2.5rem;
+    font-weight: 700;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(255, 255, 255);
+    transition: background-color 0.3s, color 0.3s;
+}
+.header > h1:hover{
+    background-color: rgba(0, 0, 0, 0.5);
+    transform: translatey(-5px);
+     color: rgb(223, 156, 10); 
+}
+.header > p{
+    justify-self: start;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: rgb(187, 150, 0);
+    margin-top: 0.5rem;
+}
+/* job-Dashboard */
+.job-dashboard {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: 2rem;
+    animation: cardFadeInup 0.5s ease-in-out;
+}
+.job-card > h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: rgb(143, 95, 5);
+    margin-bottom: 0.5rem;
+}
+.job-card > p{
+    font-size: 1rem;
+    color: rgb(255, 255, 255);
+    margin-bottom: 1rem;
+}
+.job-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, rgba(5, 12, 241, 0.2), transparent 70%);
+    opacity: 1;
+    transition: opacity 0.4s;
+    z-index: -1;
+}
+.job-card {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(22, 14, 14, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    padding: 1rem;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.job-card:hover::before {
+    opacity: 0.5;
+}
+
+.job-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgb(8, 0, 255);
+}
+.apply-button {
+    background-color:thistle;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 6px;
+    padding: 0.75rem;
+    transition: background 0.3s, transform 0.3s;
+}
+.apply-button:hover {
+   background-color: rgb(223, 156, 10);
+   cursor: pointer;
+   transform: translateY(2px);
+}
+
+
+@keyframes cardFadeInup {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
