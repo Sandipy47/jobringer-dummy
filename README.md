@@ -7,4 +7,4 @@ Employer login and registration,
 A “Worldwide Jobs” section — when you click on “View More,” it shows job listings from around the world.
 
 https://jobringer-duplicate.netlify.app 
-You can directly access the web page by netlify.app
+You can directly access the web page by netlify.app.
